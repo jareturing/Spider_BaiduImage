@@ -30,7 +30,7 @@
 ![image](https://github.com/xxhanzo/Spider_BaiduImage/assets/97886040/86b145e8-3d38-4d9e-b9e6-390569f0b8ec)
 ## 2.使用
 1. 打开cmd面板，输入命令：
-curl -X POST http://127.0.0.1:5000/crawl_images -H "Content-Type: application/json" -d "{\"query\": \"水利\", \"num_images\": 100}"
+~~~ curl -X POST http://127.0.0.1:5000/crawl_images -H "Content-Type: application/json" -d "{\"query\": \"水利\", \"num_images\": 100}"
 - 其中`"{\"query\": \"水利\", \"num_images\": 100}"`，`query`输入想要爬取的内容，例如：“水利”，“花”。。等。`num_images` 输入想要爬取的图片的数量，必须为正整数。
 - 注意`\` 符号不可缺少
 2. 下载压缩包，输入命令：
