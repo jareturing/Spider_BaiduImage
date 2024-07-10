@@ -2,9 +2,9 @@
 1. pip install -r requirements.txt
 2. 安装谷歌浏览器
 # 二、Image_Spider.py
-该程序爬取图片到本地，并生成对应的csv文件
+> 该程序爬取图片到本地，并生成对应的csv文件
 ## 1.展示
-爬取内容均来自于百度图片
+> 爬取内容均来自于百度图片
 例如输入：水利
 生成压缩包：水利_Baidu.zip
 内容展示：
@@ -40,7 +40,7 @@ curl -O http://127.0.0.1:5000/download/水利_Baidu.zip
 ![whiteboard_exported_image](https://github.com/xxhanzo/Spider_BaiduImage/assets/97886040/c60b5904-55d7-4a14-a4a8-214fc64bd571)
 
 # 三、Image_Spider_JSON.py
-该程序爬取搜索图片的url，通过url可以访问该图片
+> 该程序爬取搜索图片的url，通过url可以访问该图片
 ## 1.使用及展示
 1. 打开cmd面板，输入命令：
 curl -X POST http://127.0.0.1:5000/crawl_images -H "Content-Type: application/json" -d "{\"query\": \"水利\", \"num_images\": 5}"
