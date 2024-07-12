@@ -93,7 +93,8 @@
 ## 7.可能出现的问题
 ### 7.1 如果运行不了可能是驱动地址不对
 1. 查看驱动地址，执行命令：`which chromedriver`
-```root@iZuf6297pykaabwpfitucnZ:~# which chromedriver
+```
+root@iZuf6297pykaabwpfitucnZ:~# which chromedriver
 /usr/local/bin/chromedriver
 ```
 2. 将代码中的`chromedriver_path ` 修改为你的地址：
