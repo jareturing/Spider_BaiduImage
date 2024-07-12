@@ -4,11 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-from lxml import etree
 import time
+from lxml import etree
 
 app = Flask(__name__)
+app.debug = True  # 启用调试模式
 
 class BaiduImageSpider:
     def __init__(self, base_url, num_images):
@@ -17,8 +17,13 @@ class BaiduImageSpider:
         chrome_options = Options()
         chrome_options.add_argument("--headless")  # 设置无头模式
         chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--window-size=1920x1080")
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+        # 手动设置ChromeDriver的路径
+        chromedriver_path = "/usr/local/bin/chromedriver"  # 替换为你的chromedriver实际路径
+        self.driver = webdriver.Chrome(service=Service(chromedriver_path), options=chrome_options)
 
     def search_images(self, query):
         self.driver.get(self.base_url)
@@ -64,4 +69,4 @@ def crawl_images():
     return jsonify(results)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=8000)
