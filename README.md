@@ -30,11 +30,11 @@
 ![image](https://github.com/xxhanzo/Spider_BaiduImage/assets/97886040/86b145e8-3d38-4d9e-b9e6-390569f0b8ec)
 ## 2.使用
 1. 打开cmd面板，输入命令：
-curl -X POST http://127.0.0.1:5000/crawl_images -H "Content-Type: application/json" -d "{\"query\": \"水利\", \"num_images\": 100}" 
+```curl -X POST http://127.0.0.1:5000/crawl_images -H "Content-Type: application/json" -d "{\"query\": \"水利\", \"num_images\": 100}" ```
 - 其中`"{\"query\": \"水利\", \"num_images\": 100}"`，`query`输入想要爬取的内容，例如：“水利”，“花”。。等。`num_images` 输入想要爬取的图片的数量，必须为正整数。
 - 注意`\` 符号不可缺少
 2. 下载压缩包，输入命令：
-curl -O http://127.0.0.1:5000/download/水利_Baidu.zip
+```curl -O http://127.0.0.1:5000/download/水利_Baidu.zip```
 - 说明：其中`水利_Baidu.zip` 为你刚刚想要搜索的内容，例如你刚刚搜索内容为“花”，则此时输入命令为：
 `curl -O http://127.0.0.1:5000/download/花_Baidu.zip`
 ## 3.使用流程图
@@ -45,9 +45,9 @@ curl -O http://127.0.0.1:5000/download/水利_Baidu.zip
 > 该程序在Ubuntu系统上部署的步骤
 ## 1.安装必要的软件
 确保系统已更新，且安装了python3和pip，如已安装请忽略此步骤。
-sudo apt update
+```sudo apt update
 sudo apt upgrade
-sudo apt install python3 python3-pip
+sudo apt install python3 python3-pip```
 ## 2.设置虚拟环境
 sudo apt install python3-venv
 python3 -m venv myenv
