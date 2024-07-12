@@ -98,5 +98,4 @@ root@iZuf6297pykaabwpfitucnZ:~# which chromedriver
 2. 将代码中的`chromedriver_path ` 修改为你的地址：
 [图片]
 ### 7.2  有的图片网址可能加载不出来，是百度图片的问题，大部分网址都是有图片的。
-### 7.3 仓库地址在：https://github.com/xxhanzo/Spider_BaiduImage下的`Image_Spider_JSON.py`
 
