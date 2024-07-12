@@ -1,5 +1,5 @@
 # 一、安装依赖
-1. pip install -r requirements.txt
+1. ```pip install -r requirements.txt```
 2. 安装谷歌浏览器
 # 二、Image_Spider.py
 > 该程序爬取图片到本地，并生成对应的csv文件
