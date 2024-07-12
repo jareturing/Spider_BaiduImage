@@ -96,6 +96,6 @@
 ```root@iZuf6297pykaabwpfitucnZ:~# which chromedriver```
 ```/usr/local/bin/chromedriver```
 2. 将代码中的`chromedriver_path ` 修改为你的地址：
-[图片]
+![image](https://github.com/user-attachments/assets/bab08976-a8ec-4970-b989-a48a5490487d)
 ### 7.2  有的图片网址可能加载不出来，是百度图片的问题，大部分网址都是有图片的。
 
