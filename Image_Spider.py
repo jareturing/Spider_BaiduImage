@@ -20,10 +20,17 @@ class BaiduImageSpider:
     def __init__(self, base_url, num_images):
         self.base_url = base_url
         self.num_images = num_images
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")  # 设置无头模式
-        chrome_options.add_argument("--disable-gpu")
-        chrome_options.add_argument("--window-size=1920x1080")
+        # chrome_options = Options()
+        # chrome_options.add_argument("--headless")  # 设置无头模式
+        # chrome_options.add_argument("--disable-gpu")
+        # chrome_options.add_argument("--window-size=1920x1080")
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--remote-debugging-port=9222')
+        chrome_options.add_argument('--single-process')
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
     def search_images(self, query):
